@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
+</head>
+<body>
+    <div id="app" style="height: 80%; position: relative;">
+        <button id="connect-to-social-media">
+            <img src="assets/social.png" alt="Social Media" class="social-media-icon">
+        </button>
+        <div id="chat">
+            <div id="chat-heading-container">
+                <img id="contact-profile-pic" src="assets/default-profile.png" alt="Profile Picture" class="profile-picc">
+                <h3 id="chat-heading" style="margin-top: 20%;">Loading</h3>
+            </div>
+            <div id="messages"></div>
+            <div class="message-input-container">
+                <input type="text" id="message-input" placeholder="Type a message">
+                <button id="send-message">
+                    <img src="assets/send.png" alt="Send" class="send-icon">
+                </button>
+            </div>
+            <button id="logout" class="logout-button"><img src="assets/logout.png" alt="Send" class="send-icon"></button>
+            <input type="hidden" id="user-uid">
+            <button id="back-to-contacts" class="contacts-button"> <img src="assets/contacts.png" alt="Send" class="send-icon"></button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
